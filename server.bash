@@ -1,5 +1,24 @@
-
 #!/bin/bash
+
+pFile="wg0.conf"
+
+if [ -f "${pFile}" ]
+then
+	echo "The file wg0.conf already exists, should it be overwritten? [y/N]"
+	read to_overwrite
+	if [[ "${to_overwrite}" == "N" || "${to_overwrite}" == "" || "${to_overwrite}" == "n"  ]]
+	then
+		echo "Keeping file and exiting"
+		exit 0
+	elif [ "${to_overwrite}" == "y" ]
+		then
+			echo "Overriding wireguard configuration file"
+			# If they don't specify y/N then error	
+		else
+			echo "Invalid response"
+			exit 1
+	fi
+fi
 
 # Storyline: Script to create a wireguard server
 # Create a private key
