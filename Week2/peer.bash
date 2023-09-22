@@ -4,8 +4,14 @@
 
 
 # What is the user / peer's name
-echo -n "What is the peer's name? "
-read the_client
+if [[ $1 == "" ]]
+then
+	echo -n "What is the peer's name? "
+	read the_client
+else
+	the_client="$1"
+fi
+
 
 # Filename variable
 pFile="${the_client}-wg0.conf"
