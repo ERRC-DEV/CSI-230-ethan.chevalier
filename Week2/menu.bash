@@ -96,6 +96,7 @@ function vpn_menu()
 		sleep 2
 		vpn_menu
 	;;
+	esac
 
 	vpn_menu
 }
@@ -124,6 +125,7 @@ function security_menu()
 	;;
 	6) exit 0
 	;;
+	esac
 
 	security_menu
 }
