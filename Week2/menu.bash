@@ -108,8 +108,9 @@ function security_menu()
 	echo "[2] UID"
 	echo "[3] Check the last 10 logged in users"
 	echo "[4] Logged in users"
-	echo "[5] Back"
-	echo "[6] Exit"
+	echo "[5] Block List Menu"
+	echo "[6] Back"
+	echo "[7] Exit"
 	read -p "Select an option: " selection
 
 	case "$selection" in
@@ -121,9 +122,11 @@ function security_menu()
 	;;
 	4) who |less
 	;;
-	5) menu
+	5) bash /home/ethan/Repository/CSI-230-ethan.chevalier/Week4/parse-threat.bash
 	;;
-	6) exit 0
+	6) menu
+	;;
+	7) exit 0
 	;;
 	esac
 
