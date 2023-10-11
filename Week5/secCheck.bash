@@ -15,14 +15,6 @@ else
 fi
 }
 
-function doublecheck() {
-        echo ""
-if [[ $1 != $2 ]]
-then
-        echo "1"
-fi
-}
-
 pmax=$(egrep -i '^PASS_MAX_DAYS' /etc/login.defs | awk ' { print $2} ')
 checks "Password Max Days" "365" "${pmax}"
 
